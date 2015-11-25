@@ -41,22 +41,11 @@ public class Encription extends Window implements Runnable, iEncription{
         this.keygen = Integer.parseInt(buff[0]);
         this.N = Integer.parseInt(buff[1]);
         outputFile = new File (inputFile.getPath()+"s");
-        byte[]buf = new byte[1];
+        byte[]buf = new OpenFileController ().doOpenFile(inputFile)
         ArrayList<Integer> list = new ArrayList<>();
-        try  {
-            FileInputStream fileInputStream = new FileInputStream(inputFile);
-            int size = fileInputStream.available();
-            for (int i = 0; i<size; i++){
-                fileInputStream.read(buf, 0, 1);
-                list.add(recurs(this.keygen, buf[0]));
-            }
-            fileInputStream.close();
-            saveToFile(list);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        for (int i = 0; i<buf.length(); i++)
+           list.add(recurs(this.keygen, buf[i])); 
+
     }
 
     public void decrypt (String keygen){
