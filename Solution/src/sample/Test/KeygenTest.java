@@ -11,4 +11,22 @@ public class KeygenTest {
         int t = Keygen.gcd(5, 7);
         assertEquals(1, t);
     }
+
+    @Test
+    public void test_gsd_500and625res125() throws Exception {
+        int t = Keygen.gcd(500, 625);
+        assertEquals(125, t);
+    }
+
+    @Test
+    public void test_gsd_minus500and625res125() throws Exception {
+        int t = Keygen.gcd(-500, 625);
+        assertEquals(125, t);
+    }
+
+    @Test
+    public void test_gsd_625and0res625() throws Exception {
+        int t = Keygen.gcd(625, 0);
+        assertEquals(625, t);
+    }
 }

@@ -3,7 +3,7 @@ package sample;
 /**
  * Created by Lyaro on 22.10.2015.
  */
-class PrimeNumber implements Runnable, iPrimeNumber{
+public class PrimeNumber implements Runnable, iPrimeNumber{
     int primeNumber = 0;
     Thread t;
 
