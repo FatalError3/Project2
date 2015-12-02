@@ -35,4 +35,10 @@ public class PrimeNumberTest {
         Boolean t = PrimeNumber.isPprime(9299);
         assertFalse(t);
     }
+
+    @Test
+    public void test_isPprime_minus9199_resFalse() throws Exception {
+        Boolean t = PrimeNumber.isPprime(-9199);    //todo Negative numbers are not simple. Do this, mudila!
+        assertFalse(t);
+    }
 }

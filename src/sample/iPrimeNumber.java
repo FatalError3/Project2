@@ -6,5 +6,4 @@ package sample;
 public interface iPrimeNumber {
 
     public int getPrimeNumber ();
-    public void run();
 }

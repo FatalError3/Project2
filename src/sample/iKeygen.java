@@ -6,5 +6,4 @@ package sample;
 public interface iKeygen {
 
     public String[] generation ();
-    public void run();
 }

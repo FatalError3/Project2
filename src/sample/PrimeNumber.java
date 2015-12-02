@@ -3,23 +3,15 @@ package sample;
 /**
  * Created by Lyaro on 22.10.2015.
  */
-public class PrimeNumber implements Runnable, iPrimeNumber{
+public class PrimeNumber implements iPrimeNumber{
     int primeNumber = 0;
-    Thread t;
 
     int limit;
 
     public int getPrimeNumber (){
         limit = 100;
-        t = new Thread(this);
-        t.start();
-        try {
-            t.join();
-            return primeNumber;
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println(primeNumber);
+        Run();
+        //System.out.println(primeNumber);
         return primeNumber;
     }
 
@@ -48,8 +40,7 @@ public class PrimeNumber implements Runnable, iPrimeNumber{
         return true;
     }
 
-    @Override
-    public void run() {
+    public void Run() {
         int number = ((int)(Math.random()*limit/2 + limit/2));
         for (int i = number; i>0; i--){
             if (isPprime(i)){

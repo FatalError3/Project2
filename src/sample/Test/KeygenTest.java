@@ -2,7 +2,10 @@ package sample.Test;
 
 import sample.Keygen;
 import org.junit.Test;
+import sample.PrimeNumber;
+
 import static junit.framework.Assert.*;
+import static org.mockito.Mockito.*;
 
 
 public class KeygenTest {
@@ -29,4 +32,9 @@ public class KeygenTest {
         int t = Keygen.gcd(625, 0);
         assertEquals(625, t);
     }
+
+    @Test
+    public void test_InitialiseKeygen() throws Exception {
+    }
+
 }

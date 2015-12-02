@@ -3,38 +3,30 @@ package sample;
 /**
  * Created by Lyaro on 22.10.2015.
  */
-public class Keygen implements Runnable, iKeygen {
+public class Keygen implements iKeygen {
     int D;
     int E;
     int N;
-
-    Thread t;
 
     PrimeNumber p;
 
     public Keygen (){
         p = new PrimeNumber ();
-        t = new Thread(this);
-        t.start();
+        Run();
     }
 
     public Keygen (PrimeNumber primeNumber){
         p = primeNumber;
+        Run();
     }
 
     public String[] generation (){
-        try {
-            t.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         String keyE = Integer.toString(E) + " " + Integer.toString(N);
         String keyD = Integer.toString(D) + " " + Integer.toString(N);
         return new String [] {keyE, keyD};
     }
 
-    @Override
-    public void run() {
+    public void Run () {
         int P = p.getPrimeNumber(), Q = p.getPrimeNumber();
         N = P * Q;
         int fN = (P - 1) * (Q - 1);
