@@ -36,6 +36,10 @@ public class KeygenTest {
     @Test
     public void test_InitialiseKeygen() throws Exception {
         PrimeNumber p = mock(PrimeNumber.class);
-    }
+        when(p.getPrimeNumber()).thenReturn(9199);
 
+        Keygen kg = new Keygen(p);
+
+        verify(p).getPrimeNumber();
+    }
 }
