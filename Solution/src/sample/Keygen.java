@@ -3,7 +3,7 @@ package sample;
 /**
  * Created by Lyaro on 22.10.2015.
  */
-class Keygen implements Runnable, iKeygen {
+public class Keygen implements Runnable, iKeygen {
     int D;
     int E;
     int N;

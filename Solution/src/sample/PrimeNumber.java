@@ -3,7 +3,7 @@ package sample;
 /**
  * Created by Lyaro on 22.10.2015.
  */
-class PrimeNumber implements Runnable, iPrimeNumber{
+public class PrimeNumber implements Runnable, iPrimeNumber{
     int primeNumber = 0;
     Thread t;
 
@@ -23,7 +23,7 @@ class PrimeNumber implements Runnable, iPrimeNumber{
         return primeNumber;
     }
 
-    private boolean prime(int a) {
+    public static boolean isPprime(int a) {
         int i1, i2, i3, i4, i5, i6, i7, i8, bound;
         if (a == 0 || a == 1)
             return false;
@@ -52,7 +52,7 @@ class PrimeNumber implements Runnable, iPrimeNumber{
     public void run() {
         int number = ((int)(Math.random()*limit/2 + limit/2));
         for (int i = number; i>0; i--){
-            if (prime(i)){
+            if (isPprime(i)){
                 primeNumber = i;
                 break;
             }

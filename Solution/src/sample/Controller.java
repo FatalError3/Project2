@@ -3,7 +3,7 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
-
+//Hello!!!
 public class Controller {
     public TextField keygenE;
     public TextField keygenD;
