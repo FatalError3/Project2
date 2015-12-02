@@ -35,6 +35,7 @@ public class KeygenTest {
 
     @Test
     public void test_InitialiseKeygen() throws Exception {
+        PrimeNumber p = mock(PrimeNumber.class);
     }
 
 }
