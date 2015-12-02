@@ -10,9 +10,16 @@ public class Keygen implements Runnable, iKeygen {
 
     Thread t;
 
+    PrimeNumber p;
+
     public Keygen (){
+        p = new PrimeNumber ();
         t = new Thread(this);
         t.start();
+    }
+
+    public Keygen (PrimeNumber primeNumber){
+        p = primeNumber;
     }
 
     public String[] generation (){
@@ -28,7 +35,6 @@ public class Keygen implements Runnable, iKeygen {
 
     @Override
     public void run() {
-        PrimeNumber p = new PrimeNumber();
         int P = p.getPrimeNumber(), Q = p.getPrimeNumber();
         N = P * Q;
         int fN = (P - 1) * (Q - 1);
