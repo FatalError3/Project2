@@ -15,7 +15,15 @@ public class PrimeNumber implements iPrimeNumber{
         return primeNumber;
     }
 
-    public static boolean isPprime(int a) {
+    public static boolean isPprime (int a){
+        if (a<0)
+            return false;
+        else return isprime (a);
+    }
+
+    private static boolean isprime(int a) {
+        if (a<0)
+            return false;
         int i1, i2, i3, i4, i5, i6, i7, i8, bound;
         if (a == 0 || a == 1)
             return false;
