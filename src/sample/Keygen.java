@@ -41,6 +41,12 @@ public class Keygen implements iKeygen {
         //System.out.println(i);
     }
 
+    /**
+     *
+     * @param a необходимо протестировать на целочисленных значениях > 0
+     * @param b необходимо протестировать на целочисленных значениях > 0
+     * @return возвращает количество общих делителей 2 чисел
+     */
     public int gcd(int a,int b) {
         while (b !=0) {
             int tmp = a%b;

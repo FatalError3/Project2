@@ -2,6 +2,7 @@ package sample;
 
 /**
  * Created by Lyaro on 22.10.2015.
+ *
  */
 public class PrimeNumber implements iPrimeNumber{
     int primeNumber = 0;
@@ -15,6 +16,12 @@ public class PrimeNumber implements iPrimeNumber{
         return primeNumber;
     }
 
+
+    /**
+     *
+     * @param a данный параметр необходимо протестировать на числах: простых, не простых,а также <0
+     * @return возвращает true/false, является ли число простым соответственно
+     */
     public boolean isPprime (int a){
         if (a<0)
             return false;
